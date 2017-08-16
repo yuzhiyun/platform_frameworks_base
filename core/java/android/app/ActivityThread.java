@@ -2537,6 +2537,7 @@ public final class ActivityThread {
 
         Activity activity = null;
         try {
+            //通过LoadedApk的一个对象获取到ClassLoader
             java.lang.ClassLoader cl = r.packageInfo.getClassLoader();
             activity = mInstrumentation.newActivity(
                     cl, component.getClassName(), r.intent);
